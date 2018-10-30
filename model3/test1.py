@@ -173,6 +173,14 @@ def  mains():
     trueData=get_first60_Truedata('dataset/soccer/xrp.csv')
     computerRMSE(trueData,predict)
 
+    plt.plot(trueData, 'blue',  label="Market Price")
+    plt.plot(predict, 'red', label="Predicted Price")
+    plt.legend(loc='upper left')
+    plt.xlabel('Date')
+    plt.ylabel('value')
+    plt.title("Predicted and market price of xrp latest 60 days")
+    plt.show()
+
 
 if __name__ == '__main__':
     # trainFilePath = 'dataset/soccer/xrp.csv'

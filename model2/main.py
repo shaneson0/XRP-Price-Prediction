@@ -59,6 +59,8 @@ model = Sequential()
 model.add(LSTM(neurons, batch_input_shape=(batch_size, trainX.shape[1], trainX.shape[2])))
 model.add(Dense(1))
 model.compile(loss='mse', optimizer='adam')
+
+
 #
 # for i in range(epochs):
 #     model.fit(trainX, trainY, epochs=1, batch_size=batch_size, verbose=0, shuffle=False)
