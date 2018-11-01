@@ -74,7 +74,7 @@ model.add(Dense(1))
 model.compile(optimizer='adam', loss='mse')
 
 epochs = 120
-model.fit(trainX, trainY, epochs = epochs, batch_size = 5, shuffle = True)
+model.fit(trainX, trainY, epochs = epochs, batch_size = 3, shuffle = True)
 
 
 # ------------------------------- Test for LSTM's model -------------------------------
@@ -87,7 +87,7 @@ testY = Scaler.inverse_transform(testY)
 RMSE = math.sqrt(mean_squared_error(testY, prediction))
 
 # Test RMSE: 0.03642
-# 0.04596
+# Test RMSE: 0.01943
 print('Test RMSE: %.5f' % RMSE)
 
 # print('---- test Y ----')
